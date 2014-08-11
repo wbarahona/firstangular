@@ -1,0 +1,14 @@
+<div class="viewContainer">
+	<h1>FUCK YOU ASSHOLE! THIS IS VIEW A MUDAFUCKA</h1>
+	<label for="name">Filter by Name: </label><input type="text" name="name" data-ng-model="filter.name" placeholder="Name" /><br />
+	Results by: <b>{{filter.name}}</b><br />
+	<ul id="nameslist">
+		<li data-ng-repeat="peps in people | filter:filter.name | orderBy:'occupation'" >{{peps.name | uppercase}} - {{peps.occupation | uppercase}}</li>
+	</ul>
+	<div class="newPeople">
+		<label for="nname">New Name: </label><input type="text" name="nname" data-ng-model="newPeople.nname" placeholder="New Name" /><br />
+		<label for="noccupation">New Occupation: </label><input type="text" name="noccupation" data-ng-model="newPeople.noccupation" placeholder="New Occupation" /><br />
+		<button data-ng-click="addPeople()">Add new people</button>
+	</div>
+	<a href="#/viewB">Next view 2</a>
+</div>

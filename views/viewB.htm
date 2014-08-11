@@ -1,0 +1,8 @@
+<div class="viewContainer">
+	<h1>FUCK YOU ASSHOLE! THIS IS VIEW B MUDAFUCKA</h1>
+	<label for="occupation">Filter by Occupation: </label><input type="text" name="occupation" data-ng-model="filter.occupation" placeholder="Occupation" /><br />
+	Results by: <b>{{filter.occupation}}</b><br />
+	<ul id="nameslist">
+		<li data-ng-repeat="peps in people | filter:filter.occupation | orderBy:'name'">{{peps.name | uppercase}} - {{peps.occupation | uppercase}}</li>
+	</ul>
+</div>
